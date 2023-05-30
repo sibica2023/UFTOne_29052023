@@ -18,5 +18,15 @@ Browser("Advantage Shopping").Page("Advantage Shopping").WebButton("check_out_bt
 AIUtil("button", "CHECKOUT ($2,558.00)").Click
 
 
+If True Then
+	
+	
+End If
 
+For Iterator = 1 To 1 Step 1
+	
+	If True Then
+		
+	End If
+Next
 
