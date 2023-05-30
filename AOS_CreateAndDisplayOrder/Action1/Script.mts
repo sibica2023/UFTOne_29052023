@@ -153,7 +153,7 @@ Function CheckoutAndRetrieveOrderNumber (varUsername, varPassword)
 End Function
 
  Function DisplayOrder (varOrderNumber)
- 		Browser("Advantage Shopping").Page("Advantage Shopping").Link("UserMenu_2").Click
+ 		Browser("Advantage Shopping").Page("Advantage Shopping").Link("UserMenu_3").Click
  		Browser("Advantage Shopping").Page("Advantage Shopping").Link("My orders").Highlight
 		Browser("Advantage Shopping").Page("Advantage Shopping").Link("My orders").Click
 		Wait (2)
