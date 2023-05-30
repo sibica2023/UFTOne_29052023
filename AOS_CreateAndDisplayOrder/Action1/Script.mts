@@ -28,7 +28,7 @@ QtApp.WindowState = "Minimized"
 'LoadFunctionLibrary ("C:\Users\demo\Documents\UFT One\HybridFramework\FunctionLibrary.qfl")
 
 'Give the path of the Data file
-Environment.Value("strFilePath") =  "C:\Users\demo\Documents\UFT One\DXC_Training\DataSheet\CreateAndDisplayOrders.xlsx" 
+Environment.Value("strFilePath") =  "C:\Users\demo\Documents\Micro Focus\UFTOne_29052023\DataSheet\CreateAndDisplayOrders.xlsx" 
 
 'Create an Excel Object and open the input data file
 Set xlObj = CreateObject("Excel.Application") 
@@ -42,7 +42,7 @@ For intcurrentRow = 2 to Environment.Value("AllRows")
 
 	Call AOS_Login (GetColValue("DT_Browser"), GetColValue("DT_Url"),GetColValue("DT_Username"), GetColValue("DT_Password"))
 	Call AddProductToCart (GetColValue("DT_Quantity"))
-	Call CheckoutAndRetrieveOrderNumber (GetColValue("DT_Username"), GetColValue("DT_SafePayPassword"))
+	Call CheckoutAndRetrieveOrderNumber (GetColValue("DT_SafePayUsername"), GetColValue("DT_SafePayPassword"))
 	Call DisplayOrder (GetColValue("DT_OrderNumber"))
 	Call AOS_Logoff ()
 	
@@ -105,7 +105,7 @@ End Function
 
 Function AOS_Logoff ()
 		'Logoff from AOS
-		Browser("Advantage Shopping").Page("Advantage Shopping").Link("UserMenu_2").Click
+		Browser("Advantage Shopping").Page("Advantage Shopping").Link("UserMenu_3").Click
 		Browser("Advantage Shopping").Page("Advantage Shopping").Link("Sign out").Highlight
 		Browser("Advantage Shopping").Page("Advantage Shopping").Link("Sign out").Click
 		Wait (3)
