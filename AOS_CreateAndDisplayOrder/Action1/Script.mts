@@ -20,7 +20,7 @@
 SystemUtil.CloseProcessByName("Excel.exe")
 SystemUtil.CloseProcessByName("Chrome.exe")
 
-' Run  QTP  in minimize mode
+' Run  UFT  in minimize mode
 Set QtApp = CreateObject("QuickTest.Application") 
 QtApp.WindowState = "Minimized"
 
